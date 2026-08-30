@@ -27,7 +27,7 @@ The Core is platform-independent and open for any platform to attach; the offici
 ## Architecture
 
 <div align="center">
-  <img src="./assets/架构图-0830.png" width="960" alt="QuickApp Kit layered architecture" />
+  <img src="./assets/架构图-0830-v2.png" width="960" alt="QuickApp Kit layered architecture" />
 </div>
 
 ## Design
