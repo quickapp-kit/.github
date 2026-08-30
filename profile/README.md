@@ -26,18 +26,11 @@ The Core is platform-independent and open for any platform to attach; the offici
 
 ## Architecture
 
-```
-Quick-App DSL (.ux)
-  → Toolkit  (compile)
-  → RPK  (manifest + app.js + pages/*.js + pages/*.ir.json + assets)
-  → JS Framework  (pluggable JS engine)
-  → RenderTransaction   (JS → C++ Core, incremental intent)
-  → C++ Core  (single authoritative Runtime Tree + Layout + Event + Navigation)
-  → MountTransaction    (Core → Platform, incremental mount)
-  → Platform Adapter  (Android View / iOS UIKit / LVGL)
-```
+<div align="center">
+  <img src="./assets/架构图-0830.png" width="960" alt="QuickApp Kit layered architecture" />
+</div>
 
-## Design highlights
+## Design
 
 - **Microkernel + trimmable periphery** — a stable microkernel (bridge / render / event / lifecycle / tree / transaction); the periphery is contract-based, composable and trimmable; clean, even layering across boundaries.
 - **Platform-independent C++ Core** — core logic pushed down and consolidated into the Core, zero platform leakage; the Platform Port + Adapter mechanism attaches any platform (LVGL / Android / iOS already wired in as rendering backends).
@@ -51,12 +44,12 @@ Quick-App DSL (.ux)
 | Repo | Role |
 |---|---|
 | [quickapp-runtime-core](https://github.com/quickapp-kit/quickapp-runtime-core) | Platform-independent C++ kernel |
-| [quickapp-runtime-js](https://github.com/quickapp-kit/quickapp-runtime-js) | JS engine integration (QuickJS) |
-| [quickapp-runtime-android](https://github.com/quickapp-kit/quickapp-runtime-android) | Android adapter (JNI) |
-| [quickapp-runtime-ios](https://github.com/quickapp-kit/quickapp-runtime-ios) | iOS adapter (UIKit) |
+| [quickapp-runtime-js](https://github.com/quickapp-kit/quickapp-runtime-js) | Framework JS-side runtime |
+| [quickapp-runtime-android](https://github.com/quickapp-kit/quickapp-runtime-android) | Android rendering backend |
+| [quickapp-runtime-ios](https://github.com/quickapp-kit/quickapp-runtime-ios) | iOS rendering backend |
 | [quickapp-runtime-lvgl](https://github.com/quickapp-kit/quickapp-runtime-lvgl) | LVGL rendering backend |
 | [quickapp-embedded](https://github.com/quickapp-kit/quickapp-embedded) | Embedded targets by hardware (real-device integration) |
-| [quickapp-toolkit](https://github.com/quickapp-kit/quickapp-toolkit) | CLI & compiler (DSL → RPK) |
+| [quickapp-toolkit](https://github.com/quickapp-kit/quickapp-toolkit) | Build tool (DSL → RPK) |
 | [quickapp-benchmark](https://github.com/quickapp-kit/quickapp-benchmark) | Observability & benchmark suite |
 | [quickapp-examples](https://github.com/quickapp-kit/quickapp-examples) | Sample apps & fixtures |
 

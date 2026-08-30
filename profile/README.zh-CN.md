@@ -26,18 +26,11 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 
 ## 架构
 
-```
-快应用 DSL (.ux)
-  → Toolkit  (编译)
-  → RPK  (manifest + app.js + pages/*.js + pages/*.ir.json + assets)
-  → JS Framework  (可替换 JS 引擎)
-  → RenderTransaction   (JS → C++ Core，增量意图)
-  → C++ Core  (唯一权威 Runtime Tree + Layout + Event + Navigation)
-  → MountTransaction    (Core → Platform，增量挂载)
-  → Platform Adapter  (Android View / iOS UIKit / LVGL)
-```
+<div align="center">
+  <img src="./assets/架构图-0830.png" width="960" alt="QuickApp Kit 分层架构" />
+</div>
 
-## 设计亮点
+## 设计
 
 - **微内核 + 外围扩展** —— 稳定微内核（bridge / 渲染 / 事件 / 生命周期 / Tree / 事务）；外围基于 Contract 可扩展、可裁剪；分层边界 clean 平整。
 - **平台无关 C++ Core** —— 核心能力下沉收敛到 Core，零平台泄漏；Platform Port 与 Adapter 机制可接入多平台（已接入 LVGL / Android / iOS 作为渲染后端）。
@@ -51,12 +44,12 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 | 仓库 | 定位 |
 |---|---|
 | [quickapp-runtime-core](https://github.com/quickapp-kit/quickapp-runtime-core) | 平台无关 C++ 内核 |
-| [quickapp-runtime-js](https://github.com/quickapp-kit/quickapp-runtime-js) | JS 引擎集成（QuickJS） |
-| [quickapp-runtime-android](https://github.com/quickapp-kit/quickapp-runtime-android) | Android 适配（JNI） |
-| [quickapp-runtime-ios](https://github.com/quickapp-kit/quickapp-runtime-ios) | iOS 适配（UIKit） |
+| [quickapp-runtime-js](https://github.com/quickapp-kit/quickapp-runtime-js) | 框架 JS 侧运行时 |
+| [quickapp-runtime-android](https://github.com/quickapp-kit/quickapp-runtime-android) | Android 渲染后端 |
+| [quickapp-runtime-ios](https://github.com/quickapp-kit/quickapp-runtime-ios) | iOS 渲染后端 |
 | [quickapp-runtime-lvgl](https://github.com/quickapp-kit/quickapp-runtime-lvgl) | LVGL 渲染后端 |
 | [quickapp-embedded](https://github.com/quickapp-kit/quickapp-embedded) | 按硬件分类的嵌入式真机集成 |
-| [quickapp-toolkit](https://github.com/quickapp-kit/quickapp-toolkit) | CLI 与编译器（DSL → RPK） |
+| [quickapp-toolkit](https://github.com/quickapp-kit/quickapp-toolkit) | 编译构建工具（DSL → RPK） |
 | [quickapp-benchmark](https://github.com/quickapp-kit/quickapp-benchmark) | 可观测与 Benchmark 体系 |
 | [quickapp-examples](https://github.com/quickapp-kit/quickapp-examples) | 示例应用与 fixture |
 
