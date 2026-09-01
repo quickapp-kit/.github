@@ -27,7 +27,7 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 ## 架构
 
 <div align="center">
-  <img src="./assets/架构图-0830.png" width="960" alt="QuickApp Kit 分层架构" />
+  <img src="./assets/架构图-0901.png" width="960" alt="QuickApp Kit 分层架构" />
 </div>
 
 ## 设计
