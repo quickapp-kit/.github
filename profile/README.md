@@ -36,6 +36,7 @@ The Core is platform-independent and open for any platform to attach; the offici
 - **Platform-independent C++ Core** — core logic pushed down and consolidated into the Core, zero platform leakage; the Platform Port + Adapter mechanism attaches any platform (LVGL / Android / iOS already wired in as rendering backends).
 - **Single authoritative Runtime Tree** — the Core owns the tree and layout (Yoga), NodeID-driven, no old/new dual-tree full diff; local-update cost stays independent of tree size.
 - **JSON-free bridge** — external-function direct calls, no per-call JSON serialization; platform side is Android = JNI / iOS = ObjC++ / LVGL = in-process. Render pipeline: NodeID addressing + transaction-driven.
+- **Isomorphic boundaries** — all Core ports (JS / Platform) share one shape: `post(typed message) → EnqueueResult`; clean, even, predictable and composable.
 - **Swappable core parts** — key parts (QuickJS / Yoga) depend on abstract ports (dependency inversion).
 - **Toolkit** — DSL → Page IR → RPK compile / inspect / run, with a built-in benchmark & observability suite.
 

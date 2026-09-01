@@ -36,6 +36,7 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 - **平台无关 C++ Core** —— 核心能力下沉收敛到 Core，零平台泄漏；Platform Port 与 Adapter 机制可接入多平台（已接入 LVGL / Android / iOS 作为渲染后端）。
 - **唯一权威 Runtime Tree** —— Core 独占树与 Layout（Yoga），NodeID 驱动，无新旧双树全量 Diff；局部更新复杂度与树规模无关。
 - **免 JSON 序列化 bridge** —— 基于 external function 直调，平台侧 Android = JNI / iOS = ObjC++ 桥接 / LVGL = 同进程直调；渲染管线：NodeID 寻址 + 事务驱动。
+- **边界同构** —— Core 对外各 Port（JS / Platform）统一为 `post(typed message) → EnqueueResult` 的投递形态，clean 平整、可预测、可组合。
 - **核心部件可替换** —— 关键部件（QuickJS / Yoga）依赖抽象接口（依赖倒置）。
 - **核心工具链 Toolkit** —— DSL → Page IR → RPK 编译 / inspect / run + 内置 Benchmark 可观测体系。
 
