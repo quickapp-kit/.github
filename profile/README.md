@@ -30,14 +30,22 @@ The Core is platform-independent and open for any platform to attach; the offici
   <img src="./assets/架构图-0901.png" width="960" alt="QuickApp Kit layered architecture" />
 </div>
 
+## Design Principles
+
+- **Single source of truth, no redundancy** — state has one authoritative representation (a single authoritative Runtime Tree); no dual-tree redundancy, no full diff — information isn't duplicated, actions aren't repeated.
+- **Protocols / interfaces define boundaries** — every cross-layer boundary (Core↔Platform, JS↔Core) starts with a protocol and interface, before any implementation.
+- **Dependency inversion, swappable** — core parts depend on abstract interfaces, no direct coupling; replaceable and upgradable (the JS engine is implemented this way; other parts to follow).
+- **Heavy lifting at compile time, light at runtime** — Page IR, compile-time static dependencies, ID-driven incremental updates; push computation to compile time where possible.
+- **Microkernel + trimmable periphery** — a stable kernel, periphery trimmed per target platform (down to feature / component granularity), for resource-constrained embedded devices.
+
 ## Design
 
-- **Microkernel + trimmable periphery** — a stable microkernel (bridge / render / event / lifecycle / tree / transaction); the periphery is contract-based, composable and trimmable; clean, even layering across boundaries.
-- **Platform-independent C++ Core** — core logic pushed down and consolidated into the Core, zero platform leakage; the Platform Port + Adapter mechanism attaches any platform (LVGL / Android / iOS already wired in as rendering backends).
-- **Single authoritative Runtime Tree** — the Core owns the tree and layout (Yoga), NodeID-driven, no old/new dual-tree full diff; local-update cost stays independent of tree size.
-- **JSON-free bridge** — external-function direct calls, no per-call JSON serialization; platform side is Android = JNI / iOS = ObjC++ / LVGL = in-process. Render pipeline: NodeID addressing + transaction-driven.
-- **Isomorphic boundaries** — all Core ports (JS / Platform) share one shape: `post(typed message) → EnqueueResult`; clean, even, predictable and composable.
-- **Swappable core parts** — key parts (QuickJS / Yoga) depend on abstract ports (dependency inversion).
+- **Microkernel + trimmable periphery** — a stable microkernel (bridge / render / event / lifecycle / tree / transaction); the periphery is contract-based, composable and trimmable; **clean, even layering** across boundaries.
+- **Platform-independent C++ Core** — core logic **pushed down** and consolidated into the Core, **zero platform leakage**; the Platform Port + Adapter mechanism attaches any platform (LVGL / Android / iOS already wired in as rendering backends).
+- **Single authoritative Runtime Tree** — the Core owns the tree and layout (Yoga), NodeID-driven, **no old/new dual-tree full diff**; local-update cost stays independent of tree size.
+- **JSON-free bridge** — **External function/object** direct calls, no per-call JSON serialization; platform side is Android = JNI / iOS = ObjC++ / LVGL = in-process. Render pipeline: NodeID addressing + transaction-driven.
+- **Protocol-driven boundaries** — every boundary (JS↔Core / Core↔Platform) goes through a uniform message protocol, not direct function calls — decoupled, extensible, predictable and composable.
+- **Dependency inversion, swappable** — core parts depend on abstract interfaces, no direct coupling; replaceable and upgradable. The JS engine is implemented this way; other parts will follow the same design as time allows.
 - **Toolkit** — DSL → Page IR → RPK compile / inspect / run, with a built-in benchmark & observability suite.
 
 ## Repositories
