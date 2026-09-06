@@ -34,7 +34,7 @@ The Core is platform-independent and open for any platform to attach; the offici
 - ✅ **Android / iOS** — running on real devices
 - ✅ **Embedded** — verified on real hardware (**ESP32-S3-N16R8**)
 
-## What It Is
+## Positioning
 
 QuickApp Kit evolves the quick-app runtime from a platform-bound application format into a **protocol-driven, platform-extensible UI runtime**. Its architecture separates page semantics, the authoritative C++ Core runtime tree, and platform rendering, so adding a platform primarily means implementing a Platform backend rather than rebuilding the runtime.
 
