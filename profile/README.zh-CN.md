@@ -50,6 +50,7 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 - **微内核 + 外围扩展** —— 稳定微内核（bridge / 渲染 / 事件 / 生命周期 / Tree / 事务）；外围基于 Contract 可扩展、可裁剪；分层边界 **clean 平整**。
 - **平台无关 C++ Core** —— 核心能力**下沉**收敛到 Core，**零平台泄漏**；Platform Port 与 Adapter 机制可接入多平台（已接入 LVGL / Android / iOS 作为渲染后端）。
 - **唯一权威 Runtime Tree** —— Core 独占树与 Layout（Yoga），NodeID 驱动，**无新旧双树全量 Diff**；局部更新复杂度与树规模无关。
+- **运行时压力前置编译期** —— 模板结构与稳定 ID 体系编译期固化产出（Page IR），运行时纯 ID 寻址做增量更新，不建树、不做全树 Diff。
 - **免 JSON 序列化 bridge** —— 基于 **External function/object** 直调，平台侧 Android = JNI / iOS = ObjC++ 桥接 / LVGL = 同进程直调；渲染管线：NodeID 寻址 + 事务驱动。
 - **边界协议驱动** —— 各边界（JS↔Core / Core↔平台）统一走消息协议，非直接函数调用，解耦、易扩展、可预测、可组合。
 - **依赖倒置、可替换** —— 核心部件依赖抽象接口、无直接耦合，可替换可升级；JS 引擎已按此实现，其余部件因时间原因后续按此架构跟进。
