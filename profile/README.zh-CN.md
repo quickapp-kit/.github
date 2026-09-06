@@ -34,6 +34,10 @@ Core 平台无关、面向任意平台开放接入；官方引擎已将三端接
 - ✅ **Android / iOS** —— 真机可运行
 - ✅ **嵌入式** —— 真机验证通过（**ESP32-S3-N16R8**）
 
+## 项目定位
+
+QuickApp Kit 将快应用从“绑定平台的应用格式”推进为**协议驱动、平台可扩展的 UI Runtime**。它把页面语义、权威的 C++ Core Runtime Tree 与平台渲染明确分层；接入新平台主要实现 Platform 后端，而不必重做整套 Runtime。
+
 ## 架构
 
 <div align="center">
