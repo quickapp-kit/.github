@@ -3,9 +3,12 @@
 # Nyrax · QuickApp Kit
 
 **One core, any platform.**
-A full-stack, multi-platform solution for cross-platform quick apps.
+**A full-stack, multi-platform solution for cross-platform quick apps.**
 
-*Nyrax is the runtime engine at the heart of QuickApp Kit — the Core is platform-independent and open to any platform; the official engine has already wired in three targets: Android · iOS · embedded LVGL.*
+*The Core is platform-independent and open to any platform; three backends — Android · iOS · embedded LVGL — are already wired in and running real RPK.*
+
+**Android / iOS**: running on real devices; **Embedded**: verified on real hardware (**ESP32-S3-N16R8**)
+
 
 [简体中文](./README.zh-CN.md)
 
@@ -22,17 +25,6 @@ A full-stack, multi-platform solution for cross-platform quick apps.
 </div>
 
 ---
-
-## What it is
-
-QuickApp Kit is a full-stack, multi-platform quick-app framework:
-
-**JS Runtime + platform-independent C++ Core + three rendering backends (Android / iOS / embedded LVGL) + a build Toolkit + an observability/benchmark suite.**
-
-The Core is platform-independent and open for any platform to attach; the official engine has already wired three backends onto the **same Core**, all running real RPK packages.
-
-- ✅ **Android / iOS** — running on real devices
-- ✅ **Embedded** — verified on real hardware (**ESP32-S3-N16R8**)
 
 ## Positioning
 

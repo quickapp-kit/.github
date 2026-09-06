@@ -2,10 +2,13 @@
 
 # Nyrax · QuickApp Kit
 
-**一套内核，接入任意平台。**
-面向跨端快应用的多平台全链路解决方案。
+**同一套内核基座，接入任意平台**
+**面向跨端快应用的多平台全链路解决方案**
 
-*Nyrax 是 QuickApp Kit 的运行时引擎代号 —— Core 基座平台无关、面向任意平台开放接入；官方引擎已接入 Android · iOS · 嵌入式 LVGL 三端。*
+*Core 基座平台无关、面向任意平台开放接入；已接入 Android · iOS · 嵌入式 LVGL 三端，并跑通真实 RPK。*
+
+**Android / iOS**：真机可运行；**嵌入式**：真机验证通过（**ESP32-S3-N16R8**）
+
 
 [English](./README.md)
 
@@ -22,17 +25,6 @@
 </div>
 
 ---
-
-## 这是什么
-
-QuickApp Kit 是一套多平台全链路快应用框架解决方案：
-
-**JS Runtime + 平台无关 C++ Core + 三端渲染后端（Android / iOS / 嵌入式 LVGL）+ 构建 Toolkit + 可观测 / Benchmark 体系。**
-
-Core 平台无关、面向任意平台开放接入；官方引擎已将三端接入**同一个 Core**，并跑通真实 RPK。
-
-- ✅ **Android / iOS** —— 真机可运行
-- ✅ **嵌入式** —— 真机验证通过（**ESP32-S3-N16R8**）
 
 ## 项目定位
 
