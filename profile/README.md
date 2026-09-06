@@ -11,7 +11,7 @@ A full-stack, multi-platform solution for cross-platform quick apps.
 
 <br/>
 
-<video src="./assets/rec/quickapp-kit-simulator-3-white.mp4" width="680" autoplay loop muted playsinline></video>
+<video src="https://github.com/user-attachments/assets/6547ae22-4e95-44c1-b4f5-4f161f86930a" width="680" autoplay loop muted playsinline></video>
 
 </div>
 
