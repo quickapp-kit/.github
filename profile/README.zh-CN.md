@@ -9,6 +9,12 @@
 
 [English](./README.md)
 
+<br/>
+
+<img src="./assets/rec/sport-watch-lvgl-simulator-0906.gif" width="360" alt="LVGL 仿真器" />
+
+<sub>LVGL 仿真器</sub>
+
 </div>
 
 ---

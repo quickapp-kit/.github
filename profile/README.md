@@ -9,6 +9,12 @@ A full-stack, multi-platform solution for cross-platform quick apps.
 
 [简体中文](./README.zh-CN.md)
 
+<br/>
+
+<img src="./assets/rec/sport-watch-lvgl-simulator-0906.gif" width="360" alt="LVGL Simulator" />
+
+<sub>LVGL Simulator</sub>
+
 </div>
 
 ---
