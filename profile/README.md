@@ -11,9 +11,13 @@ A full-stack, multi-platform solution for cross-platform quick apps.
 
 <br/>
 
-<img src="./assets/rec/sport-watch-lvgl-simulator-0906.gif" width="360" alt="LVGL Simulator" />
-
-<sub>LVGL Simulator</sub>
+<table>
+<tr>
+<td align="center"><img src="./assets/rec/sport-watch-lvgl-simulator-0906.gif" width="220" alt="LVGL simulator" /><br/><sub>LVGL simulator</sub></td>
+<td align="center"><img src="./assets/rec/shop-Android-simulator-0906.gif" width="220" alt="Android simulator" /><br/><sub>Android simulator</sub></td>
+<td align="center"><img src="./assets/rec/shop-IOS-simulator-0906.gif" width="220" alt="iOS simulator" /><br/><sub>iOS simulator</sub></td>
+</tr>
+</table>
 
 </div>
 
