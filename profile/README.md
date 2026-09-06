@@ -36,7 +36,8 @@ The Core is platform-independent and open for any platform to attach; the offici
 - **Protocols / interfaces define boundaries** — every cross-layer boundary (Core↔Platform, JS↔Core) starts with a protocol and interface, before any implementation.
 - **Dependency inversion, swappable** — core parts depend on abstract interfaces, no direct coupling; replaceable and upgradable (the JS engine is implemented this way; other parts to follow).
 - **Heavy lifting at compile time, light at runtime** — Page IR, compile-time static dependencies, ID-driven incremental updates; push computation to compile time where possible.
-- **Microkernel + plugins (open-closed principle)** — a stable kernel; the periphery is protocol-based, trimmable and extensible (features / components added or removed on demand) — both extension and trimming require no kernel changes.
+- **Stable kernel + trimmable periphery** — periphery trimmed per target platform (down to feature / component granularity); the build scales small-to-large across resource budgets.
+- **Microkernel + plugin extensibility (open-closed)** — features / components extend via protocols on demand; open for extension, closed to kernel modification — no kernel changes needed.
 
 ## Design
 
