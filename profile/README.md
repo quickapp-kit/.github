@@ -11,7 +11,13 @@ A full-stack, multi-platform solution for cross-platform quick apps.
 
 <br/>
 
-<video src="https://github.com/user-attachments/assets/7c97373c-b16e-400a-95a6-5d89015ad8be" width="680" autoplay loop muted playsinline></video>
+<table>
+<tr>
+<td align="center"><video src="https://github.com/user-attachments/assets/e19887ed-3a6e-4598-9377-4a90ffa645a0" width="220" autoplay loop muted playsinline></video><br/><sub>LVGL simulator</sub></td>
+<td align="center"><video src="https://github.com/user-attachments/assets/e4f06224-806b-4b5b-87d7-6aba62e84303" width="220" autoplay loop muted playsinline></video><br/><sub>Android simulator</sub></td>
+<td align="center"><video src="https://github.com/user-attachments/assets/3cbea948-f483-423c-86ad-67f1ea944609" width="220" autoplay loop muted playsinline></video><br/><sub>iOS simulator</sub></td>
+</tr>
+</table>
 
 </div>
 
