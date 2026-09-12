@@ -13,7 +13,7 @@
 [English](./README.md)
 
 <br/>
-c f f c d f fcffcdff
+
 <table>
 <tr>
 <td align="center"><video src="https://github.com/user-attachments/assets/e19887ed-3a6e-4598-9377-4a90ffa645a0" width="220" autoplay loop muted playsinline></video><br/><sub>LVGL simulator</sub></td>
